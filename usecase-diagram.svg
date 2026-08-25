@@ -1,0 +1,70 @@
+<svg width="680" height="540" viewBox="0 0 680 540" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>UML use-case diagram for the Local Sports Tournament and Bracket Manager</title>
+<desc>Team Captain and Tournament Director actors connect to use cases inside a system boundary. Record Match Score includes Recalculate Standings, which is extended by Resolve Tiebreaker.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<rect x="100" y="50" width="460" height="450" rx="16" fill="none" stroke="#333333" stroke-width="1"/>
+<text x="330" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#111111">Tournament bracket manager</text>
+
+<g stroke="#111111" stroke-width="2" fill="none" stroke-linecap="round">
+<circle cx="45" cy="150" r="10"/>
+<line x1="45" y1="160" x2="45" y2="190"/>
+<line x1="30" y1="172" x2="60" y2="172"/>
+<line x1="45" y1="190" x2="33" y2="212"/>
+<line x1="45" y1="190" x2="57" y2="212"/>
+</g>
+<text x="45" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#111111">Team captain</text>
+
+<g stroke="#111111" stroke-width="2" fill="none" stroke-linecap="round">
+<circle cx="610" cy="150" r="10"/>
+<line x1="610" y1="160" x2="610" y2="190"/>
+<line x1="595" y1="172" x2="625" y2="172"/>
+<line x1="610" y1="190" x2="598" y2="212"/>
+<line x1="610" y1="190" x2="622" y2="212"/>
+</g>
+<text x="610" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#111111">Tournament director</text>
+
+<line x1="60" y1="172" x2="125" y2="130" stroke="#111111" stroke-width="1"/>
+<line x1="57" y1="205" x2="120" y2="240" stroke="#111111" stroke-width="1"/>
+<line x1="595" y1="172" x2="535" y2="130" stroke="#111111" stroke-width="1"/>
+<line x1="598" y1="205" x2="535" y2="240" stroke="#111111" stroke-width="1"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="1">
+<ellipse cx="220" cy="130" rx="95" ry="28"/>
+</g>
+<text x="220" y="134" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0C447C">Register team</text>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="1">
+<ellipse cx="440" cy="130" rx="95" ry="28"/>
+</g>
+<text x="440" y="134" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0C447C">Generate bracket</text>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="1">
+<ellipse cx="220" cy="240" rx="100" ry="36"/>
+</g>
+<text x="220" y="234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0C447C">View bracket &amp;</text>
+<text x="220" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0C447C">standings</text>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="1">
+<ellipse cx="440" cy="240" rx="95" ry="28"/>
+</g>
+<text x="440" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0C447C">Record match score</text>
+
+<g fill="#E1F5EE" stroke="#0F6E56" stroke-width="1">
+<ellipse cx="330" cy="350" rx="95" ry="28"/>
+</g>
+<text x="330" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#085041">Recalculate standings</text>
+
+<g fill="#E1F5EE" stroke="#0F6E56" stroke-width="1">
+<ellipse cx="330" cy="440" rx="95" ry="28"/>
+</g>
+<text x="330" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#085041">Resolve tiebreaker</text>
+
+<path d="M395 262 L365 325" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+<text x="392" y="297" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#111111">&#171;include&#187;</text>
+
+<line x1="330" y1="412" x2="330" y2="378" stroke="#111111" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+<text x="340" y="398" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#111111">&#171;extend&#187;</text>
+</svg>
