@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Self-Service Coffee Kiosk UML Component Diagram</title>
+  <desc id="desc">A layered component diagram with a kiosk user interface, order manager, payment service, receipt printer adapter, and menu repository. Provided interfaces are circles and required interfaces are open sockets.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 17px Arial, sans-serif; fill: #526175; }
+      .layer { fill: #f6f8fb; stroke: #8da0bb; stroke-width: 2; }
+      .layerLabel { font: 700 18px Arial, sans-serif; fill: #33425a; }
+      .component { fill: #ffffff; stroke: #1f4b7a; stroke-width: 3; rx: 8; }
+      .componentTitle { font: italic 15px Arial, sans-serif; fill: #44546a; }
+      .componentName { font: 700 21px Arial, sans-serif; fill: #172033; }
+      .componentText { font: 15px Arial, sans-serif; fill: #41526a; }
+      .icon { fill: none; stroke: #1f4b7a; stroke-width: 1.7; }
+      .connector { fill: none; stroke: #344d6b; stroke-width: 3; }
+      .provided { fill: #ffffff; stroke: #136f63; stroke-width: 3; }
+      .required { fill: #ffffff; stroke: #8d4a00; stroke-width: 3; }
+      .interface { font: 700 15px Arial, sans-serif; fill: #27364b; }
+      .detail { font: 14px Arial, sans-serif; fill: #526175; }
+      .legend { font: 15px Arial, sans-serif; fill: #344054; }
+      .note { font: 14px Arial, sans-serif; fill: #526175; }
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="1040"/>
+  <text x="800" y="55" text-anchor="middle" class="title">Self-Service Coffee Kiosk System</text>
+  <text x="800" y="84" text-anchor="middle" class="subtitle">UML Component Diagram - Layered Architecture</text>
+
+  <rect class="layer" x="55" y="120" width="1490" height="205" rx="12"/>
+  <text x="78" y="151" class="layerLabel">Presentation Layer</text>
+  <rect class="layer" x="55" y="350" width="1490" height="355" rx="12"/>
+  <text x="78" y="381" class="layerLabel">Business and Integration Layer</text>
+  <rect class="layer" x="55" y="730" width="1490" height="205" rx="12"/>
+  <text x="78" y="761" class="layerLabel">Data Layer</text>
+
+  <!-- Kiosk UI -->
+  <rect class="component" x="575" y="175" width="450" height="112"/>
+  <text x="600" y="203" class="componentTitle">&lt;&lt;component&gt;&gt;</text>
+  <text x="800" y="236" text-anchor="middle" class="componentName">Kiosk Touch UI</text>
+  <text x="800" y="262" text-anchor="middle" class="componentText">Coffee and size selection; card payment confirmation</text>
+  <rect class="icon" x="982" y="190" width="20" height="14"/><rect class="icon" x="986" y="194" width="20" height="14"/>
+
+  <!-- Order Manager -->
+  <rect class="component" x="540" y="430" width="520" height="132"/>
+  <text x="565" y="458" class="componentTitle">&lt;&lt;component&gt;&gt;</text>
+  <text x="800" y="492" text-anchor="middle" class="componentName">Order Manager</text>
+  <text x="800" y="520" text-anchor="middle" class="componentText">Validates selections, calculates total, coordinates payment and receipt</text>
+  <text x="800" y="543" text-anchor="middle" class="componentText">Creates the finalized order record</text>
+  <rect class="icon" x="1017" y="445" width="20" height="14"/><rect class="icon" x="1021" y="449" width="20" height="14"/>
+
+  <!-- Payment Service -->
+  <rect class="component" x="105" y="495" width="315" height="120"/>
+  <text x="130" y="523" class="componentTitle">&lt;&lt;component&gt;&gt;</text>
+  <text x="262" y="557" text-anchor="middle" class="componentName">Payment Service</text>
+  <text x="262" y="583" text-anchor="middle" class="componentText">Card authorization gateway</text>
+  <rect class="icon" x="377" y="510" width="20" height="14"/><rect class="icon" x="381" y="514" width="20" height="14"/>
+
+  <!-- Printer Adapter -->
+  <rect class="component" x="1180" y="495" width="315" height="120"/>
+  <text x="1205" y="523" class="componentTitle">&lt;&lt;component&gt;&gt;</text>
+  <text x="1337" y="557" text-anchor="middle" class="componentName">Receipt Printer Adapter</text>
+  <text x="1337" y="583" text-anchor="middle" class="componentText">Formats and sends print jobs</text>
+  <rect class="icon" x="1452" y="510" width="20" height="14"/><rect class="icon" x="1456" y="514" width="20" height="14"/>
+
+  <!-- Menu Repository -->
+  <rect class="component" x="570" y="800" width="460" height="105"/>
+  <text x="595" y="828" class="componentTitle">&lt;&lt;component&gt;&gt;</text>
+  <text x="800" y="861" text-anchor="middle" class="componentName">Menu Repository</text>
+  <text x="800" y="887" text-anchor="middle" class="componentText">Coffee types, sizes, and pricing data</text>
+  <rect class="icon" x="987" y="815" width="20" height="14"/><rect class="icon" x="991" y="819" width="20" height="14"/>
+
+  <!-- UI required IOrderAPI socket / Order Manager provided ball -->
+  <path class="connector" d="M800 287 L800 396"/>
+  <path class="required" d="M782 287 A18 18 0 0 1 818 287"/>
+  <circle class="provided" cx="800" cy="412" r="16"/>
+  <text x="827" y="351" class="interface">IOrderAPI</text>
+  <text x="827" y="371" class="detail">HTTPS / JSON order commands</text>
+
+  <!-- Order Manager required payment socket / Payment provided ball -->
+  <path class="connector" d="M540 501 L456 501 L456 548 L420 548"/>
+  <path class="required" d="M540 483 A18 18 0 0 0 540 519"/>
+  <circle class="provided" cx="436" cy="548" r="16"/>
+  <text x="173" y="470" class="interface">IPaymentProcessing</text>
+  <text x="173" y="490" class="detail">Tokenized card payment API</text>
+
+  <!-- Order Manager required receipt socket / Printer provided ball -->
+  <path class="connector" d="M1060 501 L1144 501 L1144 548 L1180 548"/>
+  <path class="required" d="M1060 483 A18 18 0 0 1 1060 519"/>
+  <circle class="provided" cx="1164" cy="548" r="16"/>
+  <text x="1198" y="470" class="interface">IReceiptPrint</text>
+  <text x="1198" y="490" class="detail">USB / printer-driver command</text>
+
+  <!-- Order Manager required menu socket / Repository provided ball -->
+  <path class="connector" d="M800 562 L800 756"/>
+  <path class="required" d="M782 562 A18 18 0 0 1 818 562"/>
+  <circle class="provided" cx="800" cy="784" r="16"/>
+  <text x="827" y="665" class="interface">IMenuCatalog</text>
+  <text x="827" y="685" class="detail">Parameterized database queries</text>
+
+  <!-- UI required catalog socket / Repository provided ball -->
+  <path class="connector" d="M1025 231 L1115 231 L1115 772 L1047 772" stroke-dasharray="8 7"/>
+  <path class="required" d="M1025 213 A18 18 0 0 1 1025 249"/>
+  <circle class="provided" cx="1047" cy="772" r="16"/>
+  <text x="1135" y="260" class="interface">IMenuDisplay</text>
+  <text x="1135" y="280" class="detail">Cached read-only menu query</text>
+
+  <!-- Legend -->
+  <line x1="260" y1="978" x2="360" y2="978" class="connector"/>
+  <circle class="provided" cx="246" cy="978" r="13"/>
+  <text x="375" y="983" class="legend">Provided interface (ball)</text>
+  <line x1="710" y1="978" x2="810" y2="978" class="connector"/>
+  <path class="required" d="M692 965 A13 13 0 0 0 692 991"/>
+  <text x="825" y="983" class="legend">Required interface (socket)</text>
+  <text x="1150" y="983" class="note">Solid: core interactions  |  Dashed: cached menu read</text>
+</svg>
