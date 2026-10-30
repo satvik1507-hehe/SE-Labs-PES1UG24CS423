@@ -1,0 +1,8 @@
+************* Module support_ticket_tracker
+Lab5/support_ticket_tracker.py:13:0: R0913: Too many arguments (6/5) (too-many-arguments)
+Lab5/support_ticket_tracker.py:13:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+Lab5/support_ticket_tracker.py:81:4: W0603: Using the global statement (global-statement)
+
+------------------------------------------------------------------
+Your code has been rated at 9.59/10 (previous run: 9.59/10, +0.00)
+
